@@ -1,0 +1,30 @@
+/* all sytles */
+html,
+body {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* big elements */
+.page-header,
+.page-footer,
+.main-content {
+  margin: 30px 0;
+  border: 5px solid red;
+}
+
+/* main-content elements */
+.main-visual,
+.intro-section {
+  margin: 30px;
+  border: 5px solid green;
+}
+
+/* intro-section elements */
+.intro-section__header,
+.intro-section__nav,
+.intro-section__content,
+.intro-section__contact {
+  margin: 30px;
+  border: 5px solid blue;
+}
