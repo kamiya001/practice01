@@ -28,3 +28,22 @@ body {
   margin: 30px;
   border: 5px solid blue;
 }
+
+/* side by side */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* side by side info */
+.page-header__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* vertically */
+.page-header-info__txt span {
+  display: block;
+}
