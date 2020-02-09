@@ -72,7 +72,7 @@ body {
   position: relative;
   height: 480px;
   background: center center no-repeat;
-  background-image: url("img/img_mv_bg.jpg");
+  background-image: url("../img/img_mv_bg.jpg");
   background-size: cover;
 }
 
@@ -152,15 +152,15 @@ body {
 
 /* 各画像を設定 */
 .intro-section__block:nth-child(1) .intro-section__img-area {
-  background-image: url("img/photo01.jpg");
+  background-image: url("../img/photo01.jpg");
 }
 
 .intro-section__block:nth-child(2) .intro-section__img-area {
-  background-image: url("img/photo02.jpg");
+  background-image: url("../img/photo02.jpg");
 }
 
 .intro-section__block:nth-child(3) .intro-section__img-area {
-  background-image: url("img/photo03.jpg");
+  background-image: url("../img/photo03.jpg");
 }
 
 /* 画像エリア */
