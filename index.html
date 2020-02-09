@@ -1,53 +1,96 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/step18.css" />
     <title>KROWL MAGAZINE sample</title>
   </head>
   <body>
     <header class="page-header">
-      <h1 class="page-header__logo">
-        <img src="img/main-logo.png" alt="sample" />
-      </h1>
-      <div class="page-header__info">
-        <div class="page-header-info__txt">
-          <span>TEL 00-0000-0000</span>
-          <span>受付時間 平日 9:00~17:00</span>
+      <div class="page-header__inr inr">
+        <h1 class="page-header__logo">
+          <img src="assets/img/main-logo.png" alt="sample" />
+        </h1>
+        <div class="page-header__info page-header-info">
+          <div class="page-header-info__txt">
+            <span>TEL 00-0000-0000</span>
+            <span>受付時間 平日 9:00〜17:00</span>
+          </div>
+          <a class="page-header-info__btn" href="#contact">お問い合わせ</a>
         </div>
-        <a href="#contact" class="page-header-info__btn">お問い合わせ</a>
       </div>
-      ヘッダー
     </header>
     <main class="main-content">
-      メインコンテンツ
       <div class="main-visual">
-        メインビジュアル
+        <h2 class="main-visual__ttl">キャッチコピー</h2>
       </div>
       <section class="intro-section">
-        イントロセクション
-        <div class="intro-section__header">
-          セクションの始まり
+        <div class="intro-section__header section-header">
+          <h3 class="section-header__ttl">section01の見出し</h3>
         </div>
         <nav class="intro-section__nav">
-          ナビゲーション
+          <div class="inr">
+            <ol>
+              <li>
+                <a href="#content1">1.テキストテキストテキスト</a>
+              </li>
+              <li>
+                <a href="#content2">2.テキストテキストテキスト</a>
+              </li>
+              <li>
+                <a href="#content3">3.テキストテキストテキスト</a>
+              </li>
+            </ol>
+          </div>
         </nav>
         <div class="intro-section__content">
-          コンテンツ
+          <div class="intro-section__block" id="content1">
+            <div class="intro-section__img-area"></div>
+            <div class="intro-section__txt-area">
+              <h4>1.テキストテキストテキストテキストテキスト</h4>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
+          <div class="intro-section__block" id="content2">
+            <div class="intro-section__img-area"></div>
+            <div class="intro-section__txt-area">
+              <h4>2.テキストテキストテキストテキストテキスト</h4>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
+          <div class="intro-section__block" id="content3">
+            <div class="intro-section__img-area"></div>
+            <div class="intro-section__txt-area">
+              <h4>3.テキストテキストテキストテキストテキスト</h4>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
         </div>
         <div class="intro-section__contact">
-          <!-- 上記のintro-section__contactは周りの白い余白を含めた要素 -->
-          <div class="contact-block">
-            お問い合わせ
+          <div class="inr">
+            <div class="contact-block">
+              <p class="contact-block__txt">
+                TEL 00-0000-0000<span>（受付時間　平日　9:00〜17:00）</span>
+              </p>
+              <a class="contact-block__btn" href="">問い合わせボタン</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      フッター
+      <div class="inr">
+        <p><small>© samplesamplesamplesamplesample</small></p>
+      </div>
     </footer>
   </body>
 </html>

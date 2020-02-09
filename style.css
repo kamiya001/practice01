@@ -1,49 +1,255 @@
-/* all sytles */
+@charset "UTF-8";
+
 html,
 body {
-  font-size: 1.8rem;
-  text-align: center;
+  min-width: 960px;
 }
 
-/* big elements */
-.page-header,
-.page-footer,
-.main-content {
-  margin: 30px 0;
-  border: 5px solid red;
+.page {
+  position: relative;
 }
 
-/* main-content elements */
-.main-visual,
-.intro-section {
-  margin: 30px;
-  border: 5px solid green;
+.inr {
+  width: 960px;
+  margin: 0 auto;
 }
 
-/* intro-section elements */
-.intro-section__header,
-.intro-section__nav,
-.intro-section__content,
-.intro-section__contact {
-  margin: 30px;
-  border: 5px solid blue;
-}
-
-/* side by side */
+/*----------------------------------------
+| page-header
+----------------------------------------*/
 .page-header {
+  padding: 17px 0;
+}
+
+.page-header__inr {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* side by side info */
 .page-header__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* vertically */
+.page-header-info__txt {
+  margin-right: 30px;
+}
+
 .page-header-info__txt span {
   display: block;
+  font-size: 1.4rem;
+}
+
+.page-header-info__btn {
+  min-width: 155px;
+  padding: calc((52px - (1.6rem * 1.6)) / 2) 0;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: red;
+}
+
+/*----------------------------------------
+| page-footer
+----------------------------------------*/
+.page-footer {
+  padding: 40px 0;
+  background-color: #aaa;
+}
+
+.page-footer small {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/*----------------------------------------
+| main-visual
+----------------------------------------*/
+.main-visual {
+  position: relative;
+  height: 480px;
+  background: center center no-repeat;
+  background-image: url("../img/img_mv_bg.jpg");
+  background-size: cover;
+}
+
+.main-visual__ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-weight: normal;
+  font-size: 7rem;
+  font-family: "YuGothic", "游ゴシック";
+  transform: translate(-50%, -50%);
+}
+
+/*----------------------------------------
+| ナビゲーション
+----------------------------------------*/
+.intro-section__nav {
+  padding: 88px 0 80px;
+}
+
+.intro-section__nav ol {
+  display: flex;
+  justify-content: space-between;
+  width: 810px;
+  margin: 0 auto;
+}
+
+.intro-section__nav ol li {
+  position: relative;
+}
+
+/* ナビゲーション内の矢印 */
+.intro-section__nav ol li:after {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translateX(-50%) rotate(45deg);
+  content: "";
+}
+
+.intro-section__nav ol li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+  padding: 0 25px;
+  color: #000;
+  font-size: 25px;
+  line-height: 1.2;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+/*----------------------------------------
+| コンテンツブロック(画像と文章のペアで１ブロック)
+----------------------------------------*/
+.intro-section__block {
+  display: flex;
+  height: 400px;
+}
+
+.intro-section__block > * {
+  width: 50%;
+}
+
+/* 偶数番目の場合、横並びを反転 */
+.intro-section__block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 各画像を設定 */
+.intro-section__block:nth-child(1) .intro-section__img-area {
+  background-image: url("../img/img_content-1.jpg");
+}
+
+.intro-section__block:nth-child(2) .intro-section__img-area {
+  background-image: url("../img/img_content-2.jpg");
+}
+
+.intro-section__block:nth-child(3) .intro-section__img-area {
+  background-image: url("../img/img_content-3.jpg");
+}
+
+/* 画像エリア */
+.intro-section__img-area {
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+/* 文章エリア */
+.intro-section__txt-area {
+  box-sizing: border-box;
+  padding: 30px 20px;
+  color: #fff;
+  background-color: #aaa;
+}
+
+/* タイトル */
+.intro-section__txt-area h4 {
+  margin-bottom: 24px;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* 文章 */
+.intro-section__txt-area p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/*----------------------------------------
+| band(セクション始めの帯)
+----------------------------------------*/
+.section-header {
+  position: relative;
+  padding: calc((87px - (30px * 1.6)) / 2) 0;
+  text-align: center;
+  background: #aaa;
+}
+
+/* 帯下部の三角形 */
+.section-header:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-color: #aaa transparent transparent transparent;
+  border-style: solid;
+  border-width: 28px 28px 0;
+  transform: translate(-50%, 100%);
+  content: "";
+}
+
+.section-header__ttl {
+  color: #fff;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+/*----------------------------------------
+| contact-block(お問い合わせブロック)
+----------------------------------------*/
+.intro-section__contact {
+  padding: 100px 0;
+}
+
+.contact-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 55px 40px 147px;
+  background: #aaa;
+}
+
+.contact-block__txt {
+  font-size: 2.2rem;
+}
+
+.contact-block__txt span {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.contact-block__btn {
+  width: 370px;
+  padding: calc((83px - (2.2rem * 1.6)) / 2) 0;
+  color: #fff;
+  font-size: 2.2rem;
+  text-align: center;
+  background: #ff0600;
 }
